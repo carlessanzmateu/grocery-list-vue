@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkout should match html 1`] = `
+<section
+  class="checkout w-full p-5"
+>
+  <p
+    class="total-amount pb-5"
+  >
+    Total Amount: $
+  </p>
+   
+  <a
+    class="button w-full p-2"
+  >
+    Checkout
+  </a>
+</section>
+`;

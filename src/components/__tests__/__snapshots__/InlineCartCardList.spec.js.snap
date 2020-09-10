@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineCartCardList should match html 1`] = `
+<section
+  class="inline-cart-card-list grid grid-cols-1 p-4"
+>
+  <h3
+    class="pb-3"
+  >
+    Cart
+  </h3>
+   
+  <inline-cart-card-stub
+    class="col-span-1"
+    item="[object Object]"
+  />
+  <inline-cart-card-stub
+    class="col-span-1"
+    item="[object Object]"
+  />
+   
+  <checkout-stub
+    totalamount="0"
+  />
+</section>
+`;

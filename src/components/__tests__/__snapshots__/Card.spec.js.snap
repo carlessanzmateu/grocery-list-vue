@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match html 1`] = `
+<div
+  class="card w-full relative rounded-sm"
+>
+  <span
+    class="favorite"
+  />
+   
+  <img
+    alt="Some description"
+    class="image w-full bg-cover rounded-t-sm"
+    src="mock.png"
+  />
+   
+  <div
+    class="card-information p-2"
+  >
+    <h3
+      class="title truncate w-full"
+    >
+      <strong>
+        some name
+      </strong>
+    </h3>
+     
+    <p
+      class="description truncate w-full mb-2"
+      title="Some description"
+    >
+      
+      Some description
+    
+    </p>
+     
+    <div
+      class="buy-info flex justify-between"
+    >
+      <span
+        class="products-left pt-2"
+      >
+        Stock: 1
+      </span>
+       
+      <span
+        class="products-left pt-2"
+      >
+        Price: 10$
+      </span>
+    </div>
+     
+    <a
+      class="add-btn rounded-sm cursor-pointer text-center p-1"
+    >
+      
+      Comprar
+    
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardList should match html 1`] = `
+<section
+  class="card-list grid md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 p-4"
+>
+  <card-stub
+    class="col-span-1"
+    item="[object Object]"
+  />
+  <card-stub
+    class="col-span-1"
+    item="[object Object]"
+  />
+</section>
+`;

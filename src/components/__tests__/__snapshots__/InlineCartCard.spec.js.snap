@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InlineCartCard should match html 1`] = `
+<div
+  class="inline-cart-card"
+>
+  <img
+    class="image"
+    src="mock.png"
+  />
+   
+  <div
+    class="card-information"
+  >
+    <h3
+      class="title"
+    >
+      <strong>
+        some name
+      </strong>
+    </h3>
+     
+    <div
+      class="buy-info"
+    >
+      <a
+        class="add-item"
+      >
+        +
+      </a>
+       
+      <span
+        class="products-left"
+      >
+        0
+      </span>
+       
+      <a
+        class="remove-item"
+      >
+        -
+      </a>
+    </div>
+  </div>
+   
+  <div
+    class="amount"
+  >
+    0$
+  </div>
+</div>
+`;
