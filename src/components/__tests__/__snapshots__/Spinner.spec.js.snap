@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner should match html 1`] = `
+<div
+  class="spinner w-full flex justify-center items-center fixed inset-0 z-50"
+>
+  <img
+    alt="spinner"
+    class="image-animation"
+    src="/spinner.gif"
+  />
+</div>
+`;

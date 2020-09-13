@@ -1,4 +1,4 @@
-const mockExchangeItem = {
+export const mockExchangeItem = {
   id: '1',
   // eslint-disable-next-line
   image_url: 'mock.png',

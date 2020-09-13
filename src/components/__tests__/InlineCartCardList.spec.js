@@ -14,7 +14,7 @@ describe('InlineCartCardList', () => {
 
   it('should create', () => {
     wrapper = createWrapper()
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.vm).toBeTruthy()
   })
 
   it('should match html', () => {
@@ -48,5 +48,16 @@ describe('InlineCartCardList', () => {
     wrapper.vm.removeItem()
 
     expect(wrapper.emitted()['remove-item'])
+  })
+
+  it('should set total amount as 0 when has no items', () => {
+    const expectedTotalAmount = 0
+    wrapper = createWrapper()
+
+    wrapper.setData({
+      items: []
+    })
+
+    expect(wrapper.vm.totalAmount).toBe(expectedTotalAmount)
   })
 })

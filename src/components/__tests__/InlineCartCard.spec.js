@@ -14,7 +14,7 @@ describe('InlineCartCard', () => {
 
   it('should create', () => {
     wrapper = createWrapper()
-    expect(wrapper.isVueInstance()).toBe(true)
+    expect(wrapper.vm).toBeTruthy()
   })
 
   it('should match html', () => {

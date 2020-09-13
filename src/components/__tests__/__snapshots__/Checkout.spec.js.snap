@@ -7,7 +7,7 @@ exports[`Checkout should match html 1`] = `
   <p
     class="total-amount pb-5"
   >
-    Total Amount: $
+    Total Amount: 10$
   </p>
    
   <a

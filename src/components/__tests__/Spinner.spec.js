@@ -1,14 +1,10 @@
 import { shallowMount } from '@vue/test-utils'
-import Checkout from '@/components/Checkout.vue'
+import Spinner from '@/components/Spinner.vue'
 
-describe('Checkout', () => {
+describe('Spinner', () => {
   let wrapper
   function createWrapper() {
-    return shallowMount(Checkout, {
-      propsData: {
-        totalAmount: 10
-      }
-    })
+    return shallowMount(Spinner)
   }
 
   it('should create', () => {
