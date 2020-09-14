@@ -165,4 +165,115 @@ describe('groceries/mutations', () => {
 
     expect(state.length).toBeUndefined()
   })
+
+  it('should have mapCartAfterNavigationFullList mutation' , () => {
+    expect(mutations.mapCartAfterNavigationFullList).toBeDefined()
+  })
+
+  it('should map cart and fullList if cart has items', () => {
+    const initialItemInFullList = new MockItem()
+    const initialItemInCart = new MockItem()
+
+    initialItemInFullList.$stock = 10
+    initialItemInCart.$stock = 10
+    initialItemInFullList.$stockReadyToBuy = 0
+    initialItemInCart.$stockReadyToBuy = 5
+
+    state = {
+      fullList: [
+        initialItemInFullList
+      ],
+      cart: [
+        initialItemInCart
+      ]
+    }
+
+    mutations.mapCartAfterNavigationFullList(state)
+
+    expect(state.fullList[0]).toEqual(state.cart[0])
+  })
+
+  it('should do nothing if cart is empty', () => {
+    const initialItemInFullList = new MockItem()
+    const expectedFullList = [initialItemInFullList]
+
+    initialItemInFullList.$stock = 10
+    initialItemInFullList.$stockReadyToBuy = 0
+
+    state = {
+      fullList: [
+        initialItemInFullList
+      ],
+      cart: []
+    }
+
+    mutations.mapCartAfterNavigationFullList(state)
+
+    expect(state.fullList).toEqual(expectedFullList)
+  })
+
+  it('should have mapCartAfterNavigationFavorites mutation' , () => {
+    expect(mutations.mapCartAfterNavigationFavorites).toBeDefined()
+  })
+
+  it('should map cart and favorites if cart has items', () => {
+    const initialItemInFavorites = new MockItem()
+    const initialItemInCart = new MockItem()
+
+    initialItemInFavorites.$stock = 10
+    initialItemInCart.$stock = 10
+    initialItemInFavorites.$stockReadyToBuy = 0
+    initialItemInCart.$stockReadyToBuy = 5
+
+    state = {
+      favorites: [
+        initialItemInFavorites
+      ],
+      cart: [
+        initialItemInCart
+      ]
+    }
+
+    mutations.mapCartAfterNavigationFavorites(state)
+
+    expect(state.favorites[0]).toEqual(state.cart[0])
+  })
+
+  it('should do nothing when call mapCartAfterNavigationFavorites but cart is empty', () => {
+    const initialItemInFavorites = new MockItem()
+    const expectedFavorites = [initialItemInFavorites]
+
+    initialItemInFavorites.$stock = 10
+    initialItemInFavorites.$stockReadyToBuy = 0
+
+    state = {
+      favorites: [
+        initialItemInFavorites
+      ],
+      cart: []
+    }
+
+    mutations.mapCartAfterNavigationFavorites(state)
+
+    expect(state.favorites).toEqual(expectedFavorites)
+  })
+
+  it('should do when call mapCartAfterNavigationFavorites but item is not in favorites', () => {
+    const initialItemInCart = new MockItem()
+    const expectedFavorites = []
+
+    initialItemInCart.$stock = 10
+    initialItemInCart.$stockReadyToBuy = 0
+
+    state = {
+      favorites: [],
+      cart: [
+        initialItemInCart
+      ]
+    }
+
+    mutations.mapCartAfterNavigationFavorites(state)
+
+    expect(state.favorites).toEqual(expectedFavorites)
+  })
 })

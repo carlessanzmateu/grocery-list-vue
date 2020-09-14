@@ -52,5 +52,36 @@ export default {
     }
 
     state.cart[currentItemIndexInCart] = item
+  },
+
+  mapCartAfterNavigationFullList (state) {
+    if (!state.cart.length) {
+      return
+    }
+
+    const itemsInCart = state.cart
+
+    itemsInCart.forEach(item => {
+      const currentItemIndexInFullList = state.fullList.findIndex(itemInList => itemInList.getId() === item.getId())
+      state.fullList[currentItemIndexInFullList] = item
+    })
+  },
+
+  mapCartAfterNavigationFavorites (state) {
+    if (!state.cart.length) {
+      return
+    }
+
+    const itemsInCart = state.cart
+
+    itemsInCart.forEach(item => {
+      const currentItemIndexInFavorites = state.favorites.findIndex(itemInList => itemInList.getId() === item.getId())
+
+      if (currentItemIndexInFavorites < 0) {
+        return
+      }
+
+      state.favorites[currentItemIndexInFavorites] = item
+    })
   }
 }

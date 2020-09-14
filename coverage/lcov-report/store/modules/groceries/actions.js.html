@@ -22,9 +22,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -36,16 +36,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>11/11</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,56 +88,56 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import GroceryListService from '@/shared/services/grocery-list.service'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import groceryListService from '@/shared/services/grocery-list.service'
 import Item from '@/shared/models/item'
 import ExchangeItem from '@/shared/models/exchangeItem'
 &nbsp;
-const groceryListService = <span class="cstat-no" title="statement not covered" >new GroceryListService()</span>
-&nbsp;
 export default {
-<span class="fstat-no" title="function not covered" >  as</span>ync getAllGroceries ({ commit }) {
-    const groceries = <span class="cstat-no" title="statement not covered" >await groceryListService.getAllGroceries()</span>
-    const groceriesAsItems = <span class="cstat-no" title="statement not covered" >groceries.data.map(<span class="fstat-no" title="function not covered" >gr</span>ocery =&gt; <span class="cstat-no" title="statement not covered" >new Item(grocery))</span></span>
+  async getAllGroceries ({ commit }) {
+    const groceries = await groceryListService.getAllGroceries()
+    const groceriesAsItems = groceries.data.map(grocery =&gt; new Item(grocery))
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    commit('setAllGroceries', groceriesAsItems)</span>
+    commit('setAllGroceries', groceriesAsItems)
+    commit('mapCartAfterNavigationFullList')
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  as</span>ync getFavorites ({ commit }) {
-    const favorites = <span class="cstat-no" title="statement not covered" >await groceryListService.getAllFavorites()</span>
-    const favoritesAsItems = <span class="cstat-no" title="statement not covered" >favorites.data.map(<span class="fstat-no" title="function not covered" >fa</span>vorite =&gt; <span class="cstat-no" title="statement not covered" >new Item(favorite))</span></span>
+  async getFavorites ({ commit }) {
+    const favorites = await groceryListService.getAllFavorites()
+    const favoritesAsItems = favorites.data.map(favorite =&gt; new Item(favorite))
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    commit('setFavorites', favoritesAsItems)</span>
+    commit('setFavorites', favoritesAsItems)
+    commit('mapCartAfterNavigationFavorites')
   },
 &nbsp;
-<span class="fstat-no" title="function not covered" >  as</span>ync setItemAsFavorite ({ dispatch }, item) {
-<span class="cstat-no" title="statement not covered" >    item.toggleFavorite()</span>
-    const exchangeItem = <span class="cstat-no" title="statement not covered" >new ExchangeItem(item)</span>
+  async setItemAsFavorite ({ dispatch }, item) {
+    item.toggleFavorite()
+    const exchangeItem = new ExchangeItem(item)
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    await groceryListService.updateGrocery(exchangeItem)</span>
+    await groceryListService.updateGrocery(exchangeItem)
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -147,7 +147,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Sep 13 2020 18:14:03 GMT+0200 (GMT+02:00)
+                at Mon Sep 14 2020 16:56:17 GMT+0200 (GMT+02:00)
             </div>
         </div>
         <script src="../../../prettify.js"></script>

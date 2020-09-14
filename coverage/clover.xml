@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600013643807" clover="3.2.0">
-  <project timestamp="1600013643807" name="All files">
-    <metrics statements="121" coveredstatements="111" conditionals="14" coveredconditionals="14" methods="65" coveredmethods="60" elements="200" coveredelements="185" complexity="0" loc="121" ncloc="121" packages="8" files="13" classes="13"/>
+<coverage generated="1600095377967" clover="3.2.0">
+  <project timestamp="1600095377967" name="All files">
+    <metrics statements="138" coveredstatements="138" conditionals="20" coveredconditionals="20" methods="73" coveredmethods="73" elements="231" coveredelements="231" complexity="0" loc="138" ncloc="138" packages="8" files="13" classes="13"/>
     <package name="components">
       <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
       <file name="Card.vue" path="/Users/carlessanzmateu/workspace/grocery-list-vue/src/components/Card.vue">
@@ -25,12 +25,12 @@
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
         <line num="19" count="3" type="stmt"/>
         <line num="20" count="3" type="stmt"/>
-        <line num="36" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="37" count="1" type="stmt"/>
-        <line num="39" count="7" type="stmt"/>
-        <line num="41" count="7" type="stmt"/>
-        <line num="42" count="14" type="stmt"/>
-        <line num="45" count="7" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
+        <line num="42" count="12" type="stmt"/>
+        <line num="45" count="6" type="stmt"/>
         <line num="50" count="1" type="stmt"/>
         <line num="53" count="1" type="stmt"/>
       </file>
@@ -48,52 +48,54 @@
       </file>
     </package>
     <package name="shared.models">
-      <metrics statements="40" coveredstatements="40" conditionals="6" coveredconditionals="6" methods="23" coveredmethods="23"/>
+      <metrics statements="42" coveredstatements="42" conditionals="6" coveredconditionals="6" methods="25" coveredmethods="25"/>
       <file name="exchangeItem.js" path="/Users/carlessanzmateu/workspace/grocery-list-vue/src/shared/models/exchangeItem.js">
-        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
-        <line num="14" count="7" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
-        <line num="17" count="7" type="stmt"/>
-        <line num="18" count="7" type="stmt"/>
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="26" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
       <file name="item.js" path="/Users/carlessanzmateu/workspace/grocery-list-vue/src/shared/models/item.js">
-        <metrics statements="31" coveredstatements="31" conditionals="4" coveredconditionals="4" methods="20" coveredmethods="20"/>
-        <line num="12" count="45" type="stmt"/>
-        <line num="13" count="45" type="stmt"/>
-        <line num="14" count="45" type="stmt"/>
-        <line num="15" count="45" type="stmt"/>
-        <line num="16" count="45" type="stmt"/>
-        <line num="17" count="45" type="stmt"/>
-        <line num="18" count="45" type="stmt"/>
-        <line num="19" count="45" type="stmt"/>
+        <metrics statements="32" coveredstatements="32" conditionals="4" coveredconditionals="4" methods="21" coveredmethods="21"/>
+        <line num="12" count="51" type="stmt"/>
+        <line num="13" count="51" type="stmt"/>
+        <line num="14" count="51" type="stmt"/>
+        <line num="15" count="51" type="stmt"/>
+        <line num="16" count="51" type="stmt"/>
+        <line num="17" count="51" type="stmt"/>
+        <line num="18" count="51" type="stmt"/>
+        <line num="19" count="51" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
         <line num="27" count="1" type="stmt"/>
-        <line num="31" count="45" type="stmt"/>
+        <line num="31" count="51" type="stmt"/>
         <line num="35" count="10" type="stmt"/>
-        <line num="39" count="4" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="51" count="2" type="stmt"/>
-        <line num="55" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
+        <line num="43" count="5" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
         <line num="63" count="2" type="cond" truecount="2" falsecount="0"/>
         <line num="64" count="1" type="stmt"/>
         <line num="67" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
+        <line num="71" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="1" type="stmt"/>
         <line num="75" count="1" type="stmt"/>
         <line num="79" count="1" type="stmt"/>
         <line num="83" count="1" type="stmt"/>
-        <line num="87" count="47" type="stmt"/>
-        <line num="91" count="5" type="stmt"/>
-        <line num="95" count="1" type="stmt"/>
-        <line num="99" count="1" type="stmt"/>
-        <line num="103" count="2" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="95" count="53" type="stmt"/>
+        <line num="99" count="5" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
+        <line num="107" count="1" type="stmt"/>
+        <line num="111" count="2" type="stmt"/>
       </file>
     </package>
     <package name="shared.services">
@@ -107,22 +109,23 @@
       </file>
     </package>
     <package name="store.modules.groceries">
-      <metrics statements="35" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="16" coveredmethods="11"/>
+      <metrics statements="50" coveredstatements="50" conditionals="12" coveredconditionals="12" methods="22" coveredmethods="22"/>
       <file name="actions.js" path="/Users/carlessanzmateu/workspace/grocery-list-vue/src/store/modules/groceries/actions.js">
-        <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
       </file>
       <file name="mutations.js" path="/Users/carlessanzmateu/workspace/grocery-list-vue/src/store/modules/groceries/mutations.js">
-        <metrics statements="25" coveredstatements="25" conditionals="6" coveredconditionals="6" methods="11" coveredmethods="11"/>
+        <metrics statements="39" coveredstatements="39" conditionals="12" coveredconditionals="12" methods="17" coveredmethods="17"/>
         <line num="3" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
@@ -148,6 +151,20 @@
         <line num="49" count="1" type="stmt"/>
         <line num="51" count="1" type="stmt"/>
         <line num="54" count="1" type="stmt"/>
+        <line num="58" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="71" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="80" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
       </file>
     </package>
     <package name="views.cart">

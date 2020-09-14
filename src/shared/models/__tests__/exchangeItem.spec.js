@@ -32,7 +32,7 @@ describe('ExchangeItem', () => {
 
     expect(exchangeItem.id).toBe(mockItem.getId())
     expect(exchangeItem.image_url).toBe(mockItem.getImage())
-    expect(exchangeItem.stock).toBe(mockItem.getStockLeft())
+    expect(exchangeItem.stock).toBe(mockItem.getStock())
     expect(exchangeItem.productName).toBe(mockItem.getName())
     expect(exchangeItem.price).toBe(mockItem.getPrice())
     expect(exchangeItem.productDescription).toBe(mockItem.getDescription())
@@ -59,5 +59,22 @@ describe('ExchangeItem', () => {
     const exchangeItem = new ExchangeItem(mockItem)
 
     expect(exchangeItem.favorite).toBe(expectedFavorite)
+  })
+
+  it('should have updateStockInCheckout method', () => {
+    const exchangeItem = new ExchangeItem(mockItem)
+
+    expect(exchangeItem.updateStockInCheckout).toBeDefined()
+  })
+
+  it('should update stock when app proceed to checkout', () => {
+    const exchangeItem = new ExchangeItem(mockItem)
+    const initialStock = 10
+    const expectedStockWhenCheckout = 100
+
+    exchangeItem.stock = initialStock
+    exchangeItem.updateStockInCheckout(expectedStockWhenCheckout)
+
+    expect(exchangeItem.stock).toBe(expectedStockWhenCheckout)
   })
 })

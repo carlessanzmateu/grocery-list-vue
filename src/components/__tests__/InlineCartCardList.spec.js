@@ -52,10 +52,10 @@ describe('InlineCartCardList', () => {
 
   it('should set total amount as 0 when has no items', () => {
     const expectedTotalAmount = 0
-    wrapper = createWrapper()
-
-    wrapper.setData({
-      items: []
+    const wrapper = shallowMount(InlineCartCardList, {
+      propsData: {
+        items: [],
+      }
     })
 
     expect(wrapper.vm.totalAmount).toBe(expectedTotalAmount)

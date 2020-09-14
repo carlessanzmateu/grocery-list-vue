@@ -1,7 +1,7 @@
 import http from '@/shared/http'
 import apiRoutes from '@/shared/constants/api.routes'
 
-export default class GroceryListService {
+class GroceryListService {
   async getAllGroceries () {
     return await http.get(apiRoutes.getGroceryListURL())
   }
@@ -17,3 +17,5 @@ export default class GroceryListService {
     })
   }
 }
+
+export default new GroceryListService()

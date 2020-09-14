@@ -35,8 +35,16 @@ export default class Item {
     return this.$stockReadyToBuy
   }
 
+  // setSelectedStock (selectedStock) {
+  //   this.$stockReadyToBuy = selectedStock
+  // }
+
   getStock () {
     return this.$stock
+  }
+
+  setStock (stock) {
+    this.$stock = stock
   }
 
   getStockLeft () {

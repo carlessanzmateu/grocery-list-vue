@@ -90,6 +90,23 @@ describe('Item', () => {
     expect(item.getStock()).toBe(expectedStock)
   })
 
+  it('should have setStock method', () => {
+    const item = new Item(mockExchangeItem)
+
+    expect(item.setStock).toBeDefined()
+  })
+
+  it('should set new stock when call setStock method', () => {
+    const item = new Item(mockExchangeItem)
+    const initialStock = 10
+    const expectedStock = 100
+
+    item.$stock = initialStock
+    item.setStock(expectedStock)
+
+    expect(item.getStock()).toBe(expectedStock)
+  })
+
   it('should have getStockLeft method', () => {
     const item = new Item(mockExchangeItem)
 

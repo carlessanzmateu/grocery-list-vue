@@ -1,8 +1,6 @@
-import GroceryListService from '@/shared/services/grocery-list.service'
+import groceryListService from '@/shared/services/grocery-list.service'
 import Item from '@/shared/models/item'
 import ExchangeItem from '@/shared/models/exchangeItem'
-
-const groceryListService = new GroceryListService()
 
 export default {
   async getAllGroceries ({ commit }) {
@@ -10,6 +8,7 @@ export default {
     const groceriesAsItems = groceries.data.map(grocery => new Item(grocery))
 
     commit('setAllGroceries', groceriesAsItems)
+    commit('mapCartAfterNavigationFullList')
   },
 
   async getFavorites ({ commit }) {
@@ -17,6 +16,7 @@ export default {
     const favoritesAsItems = favorites.data.map(favorite => new Item(favorite))
 
     commit('setFavorites', favoritesAsItems)
+    commit('mapCartAfterNavigationFavorites')
   },
 
   async setItemAsFavorite ({ dispatch }, item) {
